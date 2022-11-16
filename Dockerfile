@@ -1,4 +1,5 @@
-FROM openjdk:8
+FROM openjdk:11
+
 RUN mkdir -p /app
 
 COPY target/quarkus-app/lib/ /app/lib/
@@ -6,7 +7,6 @@ COPY target/quarkus-app/*.jar /app/
 COPY target/quarkus-app/app/ /app/app/
 COPY target/quarkus-app/quarkus/ /app/quarkus/
 
-COPY target/sidekick-demo-todo-app-java.jar /app/sidekick-demo-todo-app-java.jar
 COPY sidekick-agent-bootstrap.jar /app/sidekick-agent-bootstrap.jar
 
 WORKDIR /app
