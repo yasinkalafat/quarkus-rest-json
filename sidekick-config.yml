@@ -1,0 +1,11 @@
+sidekick:
+  apiKey: <YOUR-API-KEY>
+  agent:
+    broker:
+      host: wss://broker.service.runsidekick.com
+    log:
+      level: debug
+    application:
+      name: sidekick-demo-quarkus-app
+      stage: demo
+      version: 1.0.0
