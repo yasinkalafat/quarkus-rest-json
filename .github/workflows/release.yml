@@ -19,7 +19,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Create artifact
-        run: mvn -B clean package -DskipTests
+        run: ./mvnw package -DskipTests
       - name: Login to Docker Hub
         run: docker login -u runsidekick -p ${{ secrets.SIDEKICK_DOCKERHUB_PASSWORD }}
       - name: Build Docker image
